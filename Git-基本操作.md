@@ -18,41 +18,70 @@ categories: Tools
 安装完成后，首先需要配置一下，用户名和邮箱，每次的commit都会记录下是哪个用户推送的。
 
     $ git config --global user.name "Your Name"
+
     $ git config --global user.email "email@example.com"
 
 ### 1. 基本命令 
 ##### 初始化
-- ` git init test`  初始化一个名为test的仓库。test里有一个.git的文件夹（默认为隐藏），这个是用来管理仓库的。一个本地仓库就建好了。（版本库又名仓库，英文名repository，大概就是一个目录的样子）
+
+    git init test 
+
+ 初始化一个名为test的仓库。test里有一个.git的文件夹（默认为隐藏），这个是用来管理仓库的。一个本地仓库就建好了。（版本库又名仓库，英文名repository，大概就是一个目录的样子）
 
 或者新建文件夹test，cd test之后，输入git init，和上步有同样的效果
 ##### 查看仓库状态
-- `git status`  用于查看仓库状态，一旦发生改变就会有提示。我们在test文件夹下新建一个文本文件名为one.txt,并写入this is test，保存。运行此命令，如图所示。
+
+     git status
+  
+- 用于查看仓库状态，一旦发生改变就会有提示。我们在test文件夹下新建一个文本文件名为one.txt,并写入this is test，保存。运行此命令，如图所示。
 
 ![https://github.com/hellowanghe/blogimg/blob/master/img/git2.PNG?raw=true](https://github.com/hellowanghe/blogimg/blob/master/img/git2.PNG?raw=true)
 ##### 对比差异
-- `git diff one.txt`  可以查看你所修改的东西，在提交之前查看，一旦你add之后，这个命令就不起作用了。
+
+    git diff one.txt
+
+可以查看你所修改的东西，在提交之前查看，一旦你add之后，这个命令就不起作用了。
 ##### 添加到暂存区
-- `git add filesname`  将文件添加到暂存区
+
+    git add filesname 
+
+将文件添加到暂存区
 ##### 提交到分支
-- `git commit -m "添加了一些东西，删除了一些东西"` 提交到分支，-m后面是你提交的说明。可以填写你所修改的东西。
+
+    git commit -m "添加了一些东西，删除了一些东西"
+
+提交到分支，-m后面是你提交的说明。可以填写你所修改的东西。
 ##### 查看历史提交记录
-- `git log` 会显示你所提交的日志，及版本号，版本号是用sh1计算出的一串字符，为了避免重复。在后面加上参数--pretty=oneline会让日志成行显示，
+
+    git log
+
+会显示你所提交的日志，及版本号，版本号是用sh1计算出的一串字符，为了避免重复。在后面加上参数--pretty=oneline会让日志成行显示，
 - ![https://github.com/hellowanghe/blogimg/blob/master/img/gitlog.PNG?raw=true](https://github.com/hellowanghe/blogimg/blob/master/img/gitlog.PNG?raw=true)
 ![https://github.com/hellowanghe/blogimg/blob/master/img/githead.PNG?raw=true](https://github.com/hellowanghe/blogimg/blob/master/img/githead.PNG?raw=true)
 
 ##### 版本回退
-- `git reset --hard "版本号"` 回退到制定的版本号。git log 显示出你的所有提交记录，想要回退到那个版本，就输入版本号，一般输个前5位就行，如果没有相同的话。
+
+    git reset --hard "版本号"
+
+回退到制定的版本号。git log 显示出你的所有提交记录，想要回退到那个版本，就输入版本号，一般输个前5位就行，如果没有相同的话。
 如上图
-- `git reset --hard HEAD` 可以查看当前的版本号
+
+    git reset --hard HEAD
+
+可以查看当前的版本号
 - ![https://github.com/hellowanghe/blogimg/blob/master/img/gitreset.PNG?raw=true](https://github.com/hellowanghe/blogimg/blob/master/img/gitreset.PNG?raw=true)
 ##### 后悔药
-- git reflog 可以查看你所有的操作记录。也可以用reset命令，回退到你想要回退的版本。
+
+    git reflog 
+
+可以查看你所有的操作记录。也可以用reset命令，回退到你想要回退的版本。
 
 ![https://github.com/hellowanghe/blogimg/blob/master/img/git.PNG?raw=true](https://github.com/hellowanghe/blogimg/blob/master/img/git.PNG?raw=true)
 ##### 添加远程仓库
 在你的仓库文件中运行
 
     git remote add origin git@github.com:michaelliao/fortest.git
+
 把仓库名改成自己的就行了。
 ##### 推送到远程仓库
 
