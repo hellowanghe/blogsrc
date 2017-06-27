@@ -1,7 +1,7 @@
 ---
 title: Linux 常用命令
 date: 2017-06-10 18:43:14
-tags: 常用命令
+tags: Linux常用命令
 categories: Linux
 ---
 ### 常用基本命令（Centos7）
