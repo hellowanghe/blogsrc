@@ -8,7 +8,7 @@ categories: Tools
 这是git的官网，可以下载最新版本的git使用。我只装了windows版本的git。想详细了解的同学可以去廖雪峰的Git教程看看。
 [https://git-scm.com/](https://git-scm.com/ "Git 官网")
 
-[http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 "廖雪峰Git")
+[http://www.liaoxuefeng.com/](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 "廖雪峰Git")
 
 
 安装成功git，在cmd命令行输入 `git --version` 就可以看到git的版本号了（注意两个是`--`）![https://github.com/hellowanghe/blogimg/blob/master/img/git1.PNG?raw=true](https://github.com/hellowanghe/blogimg/blob/master/img/git1.PNG?raw=true)
