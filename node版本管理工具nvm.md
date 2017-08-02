@@ -36,3 +36,12 @@ nvm管理nodejs的目录默认在`C:\Users\dell\AppData\Roaming\nvm`，你的电
 
 nvm会自动切换到所选版本，nvm list可以看到，当前使用版本变为了4.5.0，也可用node -v查看版本是否改变。
 ![https://github.com/hellowanghe/blogimg/blob/master/img/nvmuse.PNG?raw=true](https://github.com/hellowanghe/blogimg/blob/master/img/nvmuse.PNG?raw=true)
+
+### npm配置
+
+国内使用npm如果速度比较慢，可以装上cnpm，cnpm是淘宝在国内的做的镜像，10分钟更新一次。
+```
+$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+$ npm config set registry https://registry.npm.taobao.org
+```
