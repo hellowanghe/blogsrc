@@ -44,4 +44,6 @@ nvm会自动切换到所选版本，nvm list可以看到，当前使用版本变
 $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 $ npm config set registry https://registry.npm.taobao.org
+可用以下命令查看，是否配置是否成功
+$ npm config get registry
 ```
