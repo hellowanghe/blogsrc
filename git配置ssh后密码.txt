@@ -1,0 +1,57 @@
+这种事情通常发生在更换机器后克隆自己仓库的时候，通常我们会使用https方式克隆
+
+git clone https://github.com/Name/project.git1
+
+这样便会在你git push时候要求输入用户名和密码 
+
+解决的方法是使用ssh方式克隆仓库
+
+
+
+git clone git@github.com:Name/project.git1
+
+当如，
+如果你已经用https方式克隆了仓库，就不必删除仓库重新克隆，只需将 .git/config文件中的 
+url = https://github.com/Name/project.git 
+一行改为 
+url = git@github.com:Name/project.git 
+即可。
+
+另外，记录一些容易忘记的东西。
+
+
+如何给git添加 ssh-key
+
+
+查看家目录下是否有.ssh目录
+若没有则生成一个ssh-key
+
+
+
+
+ssh-keygen -t rsa -C "email@mail.com"1
+
+连按三次回车 
+3. 将.~/ssh/id_rsa.pub内容加入你的github中 
+4. 设置你的git用户名及邮箱
+
+git config --global user.name "name"
+
+git config --global user.email "email@mail.com"
+1234
+
+
+测试你的ssh-key
+
+
+
+
+ssh -T git@github.com1
+
+输入yes后若显示  
+Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. 
+则代表成功
+
+---------------------
+
+本文来自 岚漾忆雨 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/baidu_35085676/article/details/53456884?utm_source=copy 
